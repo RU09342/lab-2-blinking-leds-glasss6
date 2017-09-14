@@ -1,36 +1,23 @@
-//***************************************************************************************
-//  MSP430 Blink the LED Demo - Software Toggle P1.0
-//
-//  Description; Toggle P1.0 by xor'ing P1.0 inside of a software loop.
-//  ACLK = n/a, MCLK = SMCLK = default DCO
-//
-//                MSP430x5xx
-//             -----------------
-//         /|\|              XIN|-
-//          | |                 |
-//          --|RST          XOUT|-
-//            |                 |
-//            |             P1.0|-->LED
-//
-//  Texas Instruments, Inc
-//  July 2013
-//***************************************************************************************
-
 #include <msp430.h>
 
-void main(void) {
-    WDTCTL = WDTPW | WDTHOLD;               // Stop watchdog timer
-    PM5CTL0 &= ~LOCKLPM5;                   // Disable the GPIO power-on default high-impedance mode
-                                            // to activate previously configured port settings
-    P1DIR |= 0x01;                          // Set P1.0 to output direction
 
-    for(;;) {
-        volatile unsigned int i;            // volatile to prevent optimization
+/**
+ * blink.c
+ */
+void main(void)
+{
+    WDTCTL = WDTPW | WDTHOLD;       // stop watchdog timer
+    P1DIR |= (BIT0);                // configure P1.0 as output
+    P2DIR |= (BIT0);
+    P1OUT = 1; // P1.0 starts ON
+    P2OUT = 0;
 
-        P1OUT ^= 0x01;                      // Toggle P1.0 using exclusive-OR
+    volatile unsigned int i;        // volatile to prevent optimization
 
-        i = 10000;                          // SW Delay
-        do i--;
-        while(i != 0);
+    while(1)
+    {
+        P1OUT ^= (BIT0);        // toggle P1.0
+        P2OUT ^= (BIT0);
+        __delay_cycles(250000); // a ~250000uS pause
     }
 }
