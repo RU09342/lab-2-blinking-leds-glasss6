@@ -1,4 +1,10 @@
 # Button Blink
+## Stephen Glass
+
+
+
+
+# Button Blink
 Now that you have looked at blinking the LED from some built in delay, but what if we wanted to control the state of the LED by a button? You may think "Why would I need a Microcontroller to perform the job of a switch?". And that is where you come in. The bare minimum for this part of the lab is to essentially replicate a switch with your development board.
 
 # YOU NEED TO CREATE THE FOLLOWING FOLDERS
