@@ -1,7 +1,12 @@
 # Button Blink
 ## Stephen Glass
 
-
+## Compatibility
+* MSP430G2553
+* MSP430F5529
+* MSP430FR2311
+* MSP430FR5994
+* MSP430FR6989
 
 
 # Button Blink
