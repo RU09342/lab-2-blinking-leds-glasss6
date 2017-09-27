@@ -1,3 +1,6 @@
+
+![Image of Yaktocat](20170919_182057.jpg)
+
 # Off Board Blink
 Now that we have the whole blinking LED out of the way, why don't we try making things a little more convenient by taking the G2553 off the development board and into a breadboard. In addition to the software, your README needs to also contain a picture of your circuit with at least 2 LEDs blinking all on a breadboard an without a development board. This means that you will need:
 * Proper power being supplied to the processor
