@@ -1,5 +1,5 @@
 
-![Image of Yaktocat](20170919_182057.jpg)
+![Image of Offboard Circuit](20170919_182057.jpg)
 
 # Off Board Blink
 Now that we have the whole blinking LED out of the way, why don't we try making things a little more convenient by taking the G2553 off the development board and into a breadboard. In addition to the software, your README needs to also contain a picture of your circuit with at least 2 LEDs blinking all on a breadboard an without a development board. This means that you will need:
@@ -26,3 +26,7 @@ Do we need to keep re-inserting the MSP into the development board to program it
 
 ### UART/Button Control
 Remember that stuff you did a few parts ago? Can you actually get all of that working again off of the development board? Can you control which lights are on, the speed they blink at, etc.
+
+
+## YouTube Video Demonstration
+![Youtube Video](https://img.youtube.com/vi/pD2vpBru0y4/0.jpg)](https://www.youtube.com/watch?v=pD2vpBru0y4)
