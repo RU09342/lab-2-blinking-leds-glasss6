@@ -14,6 +14,8 @@ unsigned int enabled = 0; // declare int to keep track of when the button was pr
 void main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;       // stop watchdog timer
+    PM5CTL0 &= ~LOCKLPM5;           // Disable the GPIO power-on default high-impedance modePM5CTL0 &= ~LOCKLPM5;
+    
     P1DIR |= (BIT0);                // configure P1.0 as output
     P1OUT &= ~(BIT0);               // reset the LEDs
     P2DIR |= (BIT0);                // configure P2.0 as output

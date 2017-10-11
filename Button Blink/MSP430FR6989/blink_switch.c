@@ -15,6 +15,7 @@ unsigned int enabled = 0; // declare int to keep track of when the button was pr
 void main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;       // stop watchdog timer
+PM5CTL0 &= ~LOCKLPM5;           // Disable the GPIO power-on default high-impedance mode (needed for FR5994)
     P1DIR |= (BIT0);                // configure P1.0 as output
     P9DIR |= (BIT7);                // configure P9.7 as output
 
